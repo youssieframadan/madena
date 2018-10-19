@@ -33,7 +33,7 @@
                         </div>
 
                         {{-- {{ $search_data }} --}}
-                        {{$products_results->count()}}
+                        
                         @foreach($products_results as $product)
                         <div class="col-12 col-md-6 col-lg-4">
                             <div class="card product-card">

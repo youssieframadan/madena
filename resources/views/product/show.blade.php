@@ -28,14 +28,22 @@
                         <div class="card-body">
                             <h3 class="font-weight-bold">{{$product->product_title}}</h3>
                         <span><Strong>By:</Strong> <a href="/store/{{$product->store()->first()->id}}">{{$product->store()->first()->storename}}</a></span>
-                            <div class="d-flex specs">
+                        
+                        <div class="d-flex specs">
                                 <div class="spec-label d-flex flex-column">
                                     <span>Price :</span>
                                     <span>Category :</span>
                                     <span>Type :</span>
                                 </div>
                                 <div class="spec-data d-flex flex-column">
+                                    @if($product->sale)
                                         <span>{{$product->product_price_presale}}</span>
+                                    @else
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="mr-5">{{$product->product_price_postsale}}</span>
+                                        <span style="line-height: 25px;font-size: 14px;font-weight: bold; text-decoration: line-through;">{{$product->product_price_presale}}</span>
+                                    </div>
+                                    @endif
                                         <span>{{$product->category()->first()->category_name}}</span>
                                         <span>{{$product->type()->first()->type_name}}</span>
                                 </div>
@@ -131,7 +139,11 @@
                     <div class="card-body">
                         <h3>Recommended</h3>
                     <div class="row">
+                        @if($product->Recommend()->count() != 1)
                         @foreach ($product->Recommend() as $recommended)
+                        @if($recommended->id == $product->id)
+                            @continue
+                        @endif
                         <div class="col-12 col-md-6 col-lg-3">
                             <div class="card product-card">
                                  <img src="https://via.placeholder.com/350x350" alt="" class="img-fluid">
@@ -146,7 +158,9 @@
                              </div>
                          </div>
                         @endforeach
-                        
+                        @else
+                            <h3 class="col-12 text-dark">No Products Recommended.</h3>
+                        @endif
                     </div>
                 </div>
             </div>
