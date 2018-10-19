@@ -1,0 +1,402 @@
+body{
+}
+.shadow{
+    box-shadow: 0px 3px 5px #eeeeee;
+}
+h5{
+    font-size: 14px;
+}
+/**** HomePage ****/
+
+/**** Category-Card ****/
+.category{
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+}
+div.category:last-of-type{
+    margin-bottom: 20px
+}
+.category .overlay{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.8;
+  transition: .5s ease;
+  transition: all 0.3s ease-in-out;
+}
+.overlay-text{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+}
+.category:hover .overlay,.category:hover .overlay-text{
+    opacity: 0;
+}
+/**** End Category-Card ****/
+
+
+/**** Search-bar ****/
+.search-form .btn{
+    padding-right:25px;
+    padding-left: 25px; 
+    margin-top: 25px;
+    background-color: rgb(59, 141, 248);
+    color: white;
+    z-index: 0;
+}
+.search-bar{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-radius: 0;
+    padding: 10px;
+}
+.btn{
+    border-radius: 0;
+}
+
+.search-bar:focus{
+   outline: none;
+   box-shadow: 0 0 0;
+}
+/**** End Search-bar ****/
+
+
+/**** nav-bar ****/
+nav.top-nav{
+
+}
+nav .navbar-brand{
+    font-size: 40px;
+}
+nav .nav-item{
+    border-bottom:2px solid transparent;
+}
+nav .nav-item:hover{
+    border-bottom:2px solid rgb(59, 141, 248);
+}
+.navbar-light .navbar-toggler{
+    border-color: transparent;
+}
+/**** End nav-bar ****/
+
+/**** top-bar ****/
+
+.top-bar .social-icons i{
+    padding: 5px;
+    transition: all 0.2s ease-in-out;
+}
+.top-bar .social-icons i:hover{
+    background-color:#3368D2;
+}
+.top-bar .links a{
+    padding: 5px;
+    color: white;
+    transition: all 0.2s ease-in-out;
+}
+.top-bar .links a:hover{
+    background-color: #3368D2;
+    text-decoration: none;
+}
+.top-bar a i {
+    color:white;
+}
+/**** End top-bar ****/
+
+
+/**** Product-Card****/
+
+.card{
+    border-radius: 0px;
+    border: 0;
+    
+}
+.product-card{
+    margin-top: 25px;
+    box-shadow: 0px 3px 5px #eeeeee;
+    transition: box-shadow 0.2s ease-in-out;
+}
+.product-card:hover{
+    box-shadow: 0px 3px 10px 3px #cccccc;
+}
+.product-card h4{
+    line-height:50px; 
+    color: #3368D2;
+    font-weight: bolder;
+}
+.product-card h5 del{
+    line-height:50px;
+}
+.product-card h5.product-name{
+    font-size: 15px;
+}
+/* .product-card .btn-primary{
+    background-color: rgb(59, 141, 248);
+} */
+/**** End Product-Card****/
+
+/**** EndHomePage ****/
+
+/**** ResultsPage ****/
+.sort-by{
+    margin-top: 10px;
+}
+.sort-by span{
+    padding-left: 10px;
+    margin-left: 10px;
+    border-left: 1px solid #3368D2;
+    font-size: 12px;
+}
+.filter-card{
+    box-shadow: 0px 3px 5px #eeeeee;
+    margin-top: 25px;
+    transition: all 0.2s ease-in-out;
+}
+.filter-card:hover{
+    box-shadow: 0px 3px 10px 3px #cccccc;
+}
+.filter-card .form-check{
+    margin-top: 10px;
+}
+.filter-btn{
+    background-color: rgb(59, 141, 248);
+    position: fixed;
+    color: white;
+    bottom: 25px;
+    left: 25px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    font-size: 16px;
+    z-index: 1;
+}
+.filter-apply{
+    background-color: rgb(59, 141, 248);
+    margin-top: 25px;
+    color: white;
+}
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Stay on top */
+    top: 0; /* Stay at the top */
+    right: 0;
+    background-color:white; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 32px 8px 8px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+}
+
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    font-size: 36px;
+    margin-right: 50px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+a:not([href]):not([tabindex]), a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
+    color: white;
+    text-decoration: none;
+}
+nav.navigation{
+    margin-top: 25px;
+}
+/**** EndResultsPage ****/
+
+/***** Dashboard ******/
+
+.dashboard-card{
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.dashboard-product{
+    margin-top: 20px;
+    box-shadow: 0px 3px 5px #eeeeee;
+    transition: all 0.2s ease-in-out;
+}
+.dashboard-product:hover{
+    box-shadow: 0px 3px 10px 3px #cccccc;
+}
+.dashboard-product .btn{
+     margin-top:20px;
+}
+.dashboard-product select{
+    margin-top:20px;
+}
+.margin-top-dashboard{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+h1.margin-top-dashboard{
+    margin-top: 25px;
+}
+#price-after-sale{
+    display: none;
+}
+.bg-pink{
+    background-color:#F35F5F;
+}
+.bg-blue{
+    background-color:#3368D2;
+}
+.bg-green{
+    background-color:#6EF35F;
+}
+.bg-dark-blue{
+    background-color:#13093B;
+}
+.bg-indigo{
+    background-color: #6574cd;
+}
+.bg-purble{
+    background-color: #9561e2;
+}
+.bg-orange{
+    background-color: #f6993f;
+}
+.bg-yellow{
+    background-color: #ffed4a;
+}
+.bg-teal{
+    background-color: #4dc0b5;
+}
+.bg-cyan{
+    background-color: #6cb2eb;
+}
+.bg-black{
+    background-color: rgb(0, 0, 0);
+}
+.bg-gray{
+    background-color: gray;
+}
+.pink{
+    color: #F35F5F
+}
+.blue{
+    color: #3368D2
+}
+.green{
+    color: #6EF35F;
+}
+.dark-blue{
+    color: #13093B;
+}
+/***** End Dashboard ******/
+
+/***** Product-Page ******/
+.product-page-card{
+    margin-top: 50px;
+    box-shadow: 0px 3px 5px #eeeeee;
+}
+
+.specs .spec-label{
+    margin-left: 50px;
+}
+.specs .spec-label span{
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.specs .spec-data span{
+    font-size: 22px;
+    font-weight: 300;
+    margin-top: 10px;
+}
+.product-page-card .img-fluid{
+    width: 100%;
+}
+.description{
+    margin-top: 10px;
+}
+.description p{
+ font-size: 18px;
+}
+.description span.label{
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.recommended{
+    margin-top: 20px;
+    box-shadow: 0px 3px 5px #eeeeee;
+}
+.recommended .product-card{
+    margin-top: 10px;
+}
+.comments{
+    margin-top: 25px;
+}
+.comment-btn{
+    margin-top: 10px;
+    float: left;
+    /* background-color: rgb(59, 141, 248); */
+}
+.btn-primary{
+    background-color: #3368D2;
+}
+.comment-form{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.comment{
+    box-shadow: 0px 3px 5px #eeeeee;
+    margin-top: 20px;
+    transition: all 0.2s ease-in-out;
+}
+.comment:hover{
+    box-shadow: 0px 3px 10px 3px #cccccc;
+}
+.comment .info{
+    margin-bottom: 5px;
+}
+.comment .info span.date{
+    font-weight: bolder;
+}
+.comment .info span.username{
+    font-size: 20px;
+    margin-left: 20px;
+    font-weight: bold;
+}
+/***** End Product-Page ******/
+
+/***** Store-Page ******/
+.storepage{
+    margin-top: 25px;
+}
+.storepage h1{
+    margin-bottom: 0;
+}
+
+/***** End Store-Page ******/

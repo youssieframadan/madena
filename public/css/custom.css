@@ -1,0 +1,601 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.shadow{
+    box-shadow: 0px 3px 5px #eeeeee;
+}
+h5{
+    font-size: 14px;
+}
+/**** HomePage ****/
+
+/**** Category-Card ****/
+.category{
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+}
+div.category:last-of-type{
+    margin-bottom: 20px
+}
+.category .overlay{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.8;
+  transition: .5s ease;
+  transition: all 0.3s ease-in-out;
+}
+.overlay-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+}
+.category:hover .overlay,.category:hover .overlay-text{
+    opacity: 0;
+}
+/**** End Category-Card ****/
+
+
+/**** Search-bar ****/
+.search-form .btn{
+    padding-left:25px;
+    padding-right: 25px; 
+    margin-top: 25px;
+    color: white;
+    z-index: 0;
+}
+.search-bar{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-radius: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 10px;
+}
+.btn{
+    border-radius: 0;
+}
+
+.search-bar:focus{
+   outline: none;
+   box-shadow: 0 0 0;
+}
+/**** End Search-bar ****/
+
+
+/**** nav-bar ****/
+nav.top-nav{
+
+}
+nav .navbar-brand{
+    font-size: 40px;
+}
+nav .nav-item{
+    border-bottom:2px solid transparent;
+}
+nav .nav-item:hover{
+    border-bottom:2px solid rgb(59, 141, 248);
+}
+.navbar-light .navbar-toggler{
+    border-color: transparent;
+}
+/**** End nav-bar ****/
+
+/**** top-bar ****/
+
+.top-bar .social-icons i{
+    padding: 5px;
+    transition: all 0.2s ease-in-out;
+}
+.top-bar .social-icons i:hover{
+    background-color:#3368D2;
+}
+.top-bar .links a{
+    padding: 5px;
+    color: white;
+    transition: all 0.2s ease-in-out;
+}
+.top-bar .links a:hover{
+    background-color: #3368D2;
+    text-decoration: none;
+}
+.top-bar a i {
+    color:white;
+}
+/**** End top-bar ****/
+
+
+/**** Product-Card****/
+
+.card{
+    border-radius: 0px;
+    border: 0;
+    
+}
+.product-card{
+    margin-top: 25px;
+    box-shadow: 0px 3px 5px #eeeeee;
+    transition: box-shadow 0.2s ease-in-out;
+}
+.product-card:hover{
+    box-shadow: 0px 3px 10px 3px #cccccc;
+}
+.product-card h4{
+    line-height:50px; 
+    color: #3368D2;
+    font-weight: bolder;
+}
+.product-card h5 del{
+    line-height:50px;
+}
+.product-card h5.product-name{
+    font-size: 15px;
+}
+/* .product-card .btn-primary{
+    background-color: rgb(59, 141, 248);
+} */
+/**** End Product-Card****/
+
+/**** EndHomePage ****/
+
+/**** ResultsPage ****/
+.sort-by{
+    margin-top: 10px;
+}
+.sort-by span{
+    padding-right: 10px;
+    margin-right: 10px;
+    border-right: 1px solid #3368D2;
+    font-size: 12px;
+}
+.filter-card{
+    box-shadow: 0px 3px 5px #eeeeee;
+    margin-top: 25px;
+    transition: all 0.2s ease-in-out;
+}
+.filter-card:hover{
+    box-shadow: 0px 3px 10px 3px #cccccc;
+}
+.filter-card .form-check{
+    margin-top: 10px;
+}
+.filter-btn{
+    /* background-color: rgb(59, 141, 248); */
+    position: fixed;
+    color: white;
+    bottom: 25px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    font-size: 16px;
+    z-index: 1;
+}
+.filter-apply{
+    /* background-color: rgb(59, 141, 248); */
+    margin-top: 25px;
+    color: white;
+}
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color:white; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+}
+
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+a:not([href]):not([tabindex]), a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
+    color: white;
+    text-decoration: none;
+}
+nav.navigation{
+    margin-top: 25px;
+}
+/**** EndResultsPage ****/
+
+/***** Dashboard ******/
+
+.dashboard-card{
+    color: white;
+    box-shadow: 0px 3px 5px #eeeeee;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    transition: all 0.2s ease-in-out;
+}
+.dashboard-card:hover{
+    box-shadow: 0px 3px 10px 3px #cccccc;
+}
+.dashboard-product{
+    margin-top: 20px;
+    box-shadow: 0px 3px 5px #eeeeee;
+    transition: all 0.2s ease-in-out;
+}
+.dashboard-product:hover{
+    box-shadow: 0px 3px 10px 3px #cccccc;
+}
+.dashboard-product .btn{
+     margin-top:20px;
+}
+.dashboard-product select{
+    margin-top:20px;
+}
+.margin-top-dashboard{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+h1.margin-top-dashboard{
+    margin-top: 25px;
+}
+#price-after-sale{
+    display: none;
+}
+#price-after-sale-edit{
+    display: none;
+}
+.bg-pink{
+    background-color:#F35F5F;
+}
+.bg-blue{
+    background-color:#3368D2;
+}
+.bg-green{
+    background-color:#6EF35F;
+}
+.bg-dark-blue{
+    background-color:#13093B;
+}
+.bg-indigo{
+    background-color: #6574cd;
+}
+.bg-purble{
+    background-color: #9561e2;
+}
+.bg-orange{
+    background-color: #f6993f;
+}
+.bg-yellow{
+    background-color: #ffed4a;
+}
+.bg-teal{
+    background-color: #4dc0b5;
+}
+.bg-cyan{
+    background-color: #6cb2eb;
+}
+.bg-black{
+    background-color: rgb(0, 0, 0);
+}
+.bg-gray{
+    background-color: gray;
+}
+.pink{
+    color: #F35F5F
+}
+.blue{
+    color: #3368D2
+}
+.green{
+    color: #6EF35F;
+}
+.dark-blue{
+    color: #13093B;
+}
+/***** End Dashboard ******/
+
+/***** Product-Page ******/
+.product-page-card{
+    margin-top: 50px;
+    box-shadow: 0px 3px 5px #eeeeee;
+}
+
+.specs .spec-label{
+    margin-right: 50px;
+}
+.specs .spec-label span{
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.specs .spec-data span{
+    font-size: 22px;
+    font-weight: 300;
+    margin-top: 10px;
+}
+.product-page-card .img-fluid{
+    width: 100%;
+}
+.description{
+    margin-top: 10px;
+}
+.description p{
+ font-size: 18px;
+}
+.description span.label{
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.recommended{
+    margin-top: 20px;
+    box-shadow: 0px 3px 5px #eeeeee;
+}
+.recommended .product-card{
+    margin-top: 10px;
+}
+.comments{
+    margin-top: 25px;
+}
+.comment-btn{
+    margin-top: 10px;
+    float: right;
+    /* background-color: rgb(59, 141, 248); */
+}
+.btn-primary{
+    background-color: #3368D2;
+    border: 1px solid #3368D2;
+}
+.comment-form{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.comment{
+    box-shadow: 0px 3px 5px #eeeeee;
+    margin-top: 20px;
+    transition: all 0.2s ease-in-out;
+}
+.comment:hover{
+    box-shadow: 0px 3px 10px 3px #cccccc;
+}
+.comment .info{
+    margin-bottom: 5px;
+}
+.comment .info span.date{
+    font-weight: bolder;
+}
+.comment .info span.username{
+    font-size: 20px;
+    margin-right: 20px;
+    font-weight: bold;
+}
+/***** End Product-Page ******/
+
+/***** Store-Page ******/
+.storepage{
+    margin-top: 25px;
+}
+.storepage h1{
+    margin-bottom: 0;
+}
+
+/***** End Store-Page ******/
+
+/******** Image-iploader  ***********/
+
+input.image-uploader{
+    display: none;
+}
+#custom-upload{
+    width: 100%;
+    height: 100px;
+    background-color: rgb(194, 198, 206);
+    border: #0077b5 3px dotted;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/************ Social media buttons *************/
+.resp-sharing-button__link,
+.resp-sharing-button__icon {
+  display: inline-block
+}
+
+.resp-sharing-button__link {
+  text-decoration: none;
+  color: #fff;
+  margin: 0.5em
+}
+
+.resp-sharing-button {
+  border-radius: 5px;
+  transition: 25ms ease-out;
+  padding: 0.5em 0.75em;
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif
+}
+
+.resp-sharing-button__icon svg {
+  width: 1em;
+  height: 1em;
+  margin-right: 0.4em;
+  vertical-align: top
+}
+
+.resp-sharing-button--small svg {
+  margin: 0;
+  vertical-align: middle
+}
+
+/* Non solid icons get a stroke */
+.resp-sharing-button__icon {
+  stroke: #fff;
+  fill: none
+}
+
+/* Solid icons get a fill */
+.resp-sharing-button__icon--solid,
+.resp-sharing-button__icon--solidcircle {
+  fill: #fff;
+  stroke: none
+}
+
+.resp-sharing-button--twitter {
+  background-color: #55acee
+}
+
+.resp-sharing-button--twitter:hover {
+  background-color: #2795e9
+}
+
+.resp-sharing-button--pinterest {
+  background-color: #bd081c
+}
+
+.resp-sharing-button--pinterest:hover {
+  background-color: #8c0615
+}
+
+.resp-sharing-button--facebook {
+  background-color: #3b5998
+}
+
+.resp-sharing-button--facebook:hover {
+  background-color: #2d4373
+}
+
+.resp-sharing-button--tumblr {
+  background-color: #35465C
+}
+
+.resp-sharing-button--tumblr:hover {
+  background-color: #222d3c
+}
+
+.resp-sharing-button--reddit {
+  background-color: #5f99cf
+}
+
+.resp-sharing-button--reddit:hover {
+  background-color: #3a80c1
+}
+
+.resp-sharing-button--google {
+  background-color: #dd4b39
+}
+
+.resp-sharing-button--google:hover {
+  background-color: #c23321
+}
+
+.resp-sharing-button--linkedin {
+  background-color: #0077b5
+}
+
+.resp-sharing-button--linkedin:hover {
+  background-color: #046293
+}
+
+.resp-sharing-button--email {
+  background-color: #777
+}
+
+.resp-sharing-button--email:hover {
+  background-color: #5e5e5e
+}
+
+.resp-sharing-button--xing {
+  background-color: #1a7576
+}
+
+.resp-sharing-button--xing:hover {
+  background-color: #114c4c
+}
+
+.resp-sharing-button--whatsapp {
+  background-color: #25D366
+}
+
+.resp-sharing-button--whatsapp:hover {
+  background-color: #1da851
+}
+
+.resp-sharing-button--hackernews {
+background-color: #FF6600
+}
+.resp-sharing-button--hackernews:hover, .resp-sharing-button--hackernews:focus {   background-color: #FB6200 }
+
+.resp-sharing-button--vk {
+  background-color: #507299
+}
+
+.resp-sharing-button--vk:hover {
+  background-color: #43648c
+}
+
+.resp-sharing-button--facebook {
+  background-color: #3b5998;
+  border-color: #3b5998;
+}
+
+.resp-sharing-button--facebook:hover,
+.resp-sharing-button--facebook:active {
+  background-color: #2d4373;
+  border-color: #2d4373;
+}
+
+.resp-sharing-button--twitter {
+  background-color: #55acee;
+  border-color: #55acee;
+}
+
+.resp-sharing-button--twitter:hover,
+.resp-sharing-button--twitter:active {
+  background-color: #2795e9;
+  border-color: #2795e9;
+}
+
+.resp-sharing-button--whatsapp {
+  background-color: #25D366;
+  border-color: #25D366;
+}
+
+.resp-sharing-button--whatsapp:hover,
+.resp-sharing-button--whatsapp:active {
+  background-color: #1DA851;
+  border-color: #1DA851;
+}
