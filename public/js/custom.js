@@ -181,8 +181,8 @@ $('#Edit-product-modal').on('shown.bs.modal', function (e) {
     method: "get"    
   }).done(function(response) {
     //Setting input values
-    $("input[name='product_title']").val(response.product_title);
-    $("input[name='Product_On_Sale']").prop('checked',response.product_sale);
+    $("input#product_title_edit").val(response.product_title);
+    $("input#defaultCheck3_edit").prop('checked',response.product_sale);
     if(response.product_sale){
             $('#price-after-sale-edit').show();
             $('#original-price-label-edit').text('Price before Sale');
@@ -190,12 +190,27 @@ $('#Edit-product-modal').on('shown.bs.modal', function (e) {
             $('#price-after-sale-edit').hide();
             $('#original-price-label-edit').text('Price');
     }
-    $("textarea[name='description']").val(response.product_description);
-    $("input[name='price_original']").val(response.product_price_presale);
-    $("input[name='price_new']").val(response.product_price_postsale);
-    $("select#Category").val(response.product_category_id);
-    $("select#Type").val(response.product_type_id);
+    $("textarea#description_edit").val(response.product_description);
+    $("input#price_original_edit").val(response.product_price_presale);
+    $("input#price_new_edit").val(response.product_price_postsale);
+    $("select#Category_edit").val(response.product_category_id);
+    $("select#Type_edit").attr('data-source','/category/'+ response.product_category_id +'/types');
+    $.ajax({
+      url: $('select#Type_edit').attr('data-source'),
+    }).then(function(options){
+      $('select#Type_edit').html('');
+      options.map(function(option){
+        var $option = $('<option>');
+  
+        $option
+          .val(option.id)
+          .text(option.type_name);
+          $('select#Type_edit').append($option);
+      })
+    })
+    $("select#Type_edit").val(response.product_type_id);
 
+    
 
     //Setting submit url
     
@@ -204,11 +219,28 @@ $('#Edit-product-modal').on('shown.bs.modal', function (e) {
 })
 
 
+$('select#Category_edit').change(function(){
+  var category_id = $(this).val();
+  
+  $('select#Type_edit').attr('data-source','/category/'+ category_id +'/types');
+  $.ajax({
+    url: $('select#Type_edit').attr('data-source'),
+  }).then(function(options){
+    $('select#Type_edit').html('');
+    options.map(function(option){
+      var $option = $('<option>');
+
+      $option
+        .val(option.id)
+        .text(option.type_name);
+        $('select#Type_edit').append($option);
+    })
+  })
+})
 $('select#Category').change(function(){
   var category_id = $(this).val();
   
   $('select#Type').attr('data-source','/category/'+ category_id +'/types');
-  console.log($('select#Type').attr('data-source'));
   $.ajax({
     url: $('select#Type').attr('data-source'),
   }).then(function(options){

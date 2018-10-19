@@ -190,44 +190,36 @@
                 <div class="modal-body">
                         <div class="form-group">
                                 <label for="product_title">Product Title</label>
-                                <input type="text" name="product_title" class="form-control" id="product_title">
+                                <input type="text" name="product_title" class="form-control" id="product_title_edit">
                           </div>
                           <div class="form-group">
                               <label for="Category">Product Category</label>
-                              <select name="category_id" id="Category" class="form-control">
-                                    <option value="1">Women's Wear</option>
-                                    <option value="2">Men's Wear</option>
-                                    <option value="3">Child's Wear</option>
-                                    <option value="4">Accessories</option>
+                              <select name="category_id" id="Category_edit" class="form-control" data-source="/categories">
                                </select>
                           </div>
                           <div class="form-group">
                                 <label for="Type">Product Type</label>
-                                <select name="type_id" id="Type" class="form-control">
-                                      <option value="1">T-shirt</option>
-                                      <option value="2">Blouse</option>
-                                      <option value="3">Skirt</option>
-                                      <option value="4">Dress</option>
-                                      <option value="5">Jeans</option>
+                                <select name="type_id" id="Type_edit" class="form-control" data-source="">
+
                                  </select>
                             </div>
                             <div class="form-group">
                                 <label for="description">Description</label>
-                                <textarea name="description" id="description" cols="30" rows="5" class="form-control"></textarea>
+                                <textarea name="description" id="description_edit" cols="30" rows="5" class="form-control"></textarea>
                             </div>
                             <div class="form-check form-group">
-                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck3" name="Product_On_Sale">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck3_edit" name="Product_On_Sale">
                                     <label class="form-check-label" for="defaultCheck3">
                                         Product On Sale
                                     </label>
                             </div>
                             <div class="form-group">
                                     <label for="price_original-edit" id="original-price-label-edit">Price</label>
-                                    <input type="number" name="price_original" class="form-control" id="price_original-edit">
+                                    <input type="number" name="price_original" class="form-control" id="price_original_edit">
                             </div>
                             <div class="form-group" id="price-after-sale-edit">
                                     <label for="price_new-edit">Price After Sale</label>
-                                    <input type="number" name="price_new" class="form-control" id="price_new-edit">
+                                    <input type="number" name="price_new" class="form-control" id="price_new_edit">
                             </div>
                           {{-- <div class="row">
                               <div class="form-group col-6">
