@@ -20,7 +20,7 @@
         "vue": "^2.5.7"
     },
     "dependencies": {
-        "file-upload-with-preview": "^3.0.4",
+        "file-upload-with-preview": "^4.2.0",
         "fine-uploader": "^5.16.2"
     }
 }
